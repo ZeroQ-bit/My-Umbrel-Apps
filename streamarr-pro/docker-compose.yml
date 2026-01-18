@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
   streamarr:
-    image: ghcr.io/ZeroQ-bit/StreamArr-Pro:latest
+    build:
+      context: https://github.com/ZeroQ-bit/StreamArr-Pro.git
+      dockerfile: Dockerfile
     restart: unless-stopped
     ports:
       - "8080:8080"
