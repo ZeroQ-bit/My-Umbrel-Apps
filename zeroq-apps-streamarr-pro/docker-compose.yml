@@ -8,8 +8,6 @@ services:
 
   streamarr:
     image: zeroq/streamarr-pro:latest
-    ports:
-      - "8080:8080"
     environment:
       - DATABASE_URL=postgres://streamarr:streamarr@postgres:5432/streamarr?sslmode=disable
       - PORT=8080
@@ -22,17 +20,12 @@ services:
       - ${APP_DATA_DIR}/cache:/app/cache
       - ${APP_DATA_DIR}/logs:/app/logs
       - ${APP_DATA_DIR}/channels:/app/channels
-      - ${APP_DATA_DIR}/proxies.txt:/app/proxies.txt:ro
-      - /var/run/docker.sock:/var/run/docker.sock
+      # Optional per-user config; avoid binding files that may not exist
+      #- ${APP_DATA_DIR}/proxies.txt:/app/proxies.txt:ro
     depends_on:
       postgres:
         condition: service_healthy
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/api/v1/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
+    # Healthcheck disabled to avoid dependency on curl/wget in image
 
   postgres:
     image: postgres:16-alpine
