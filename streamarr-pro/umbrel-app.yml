@@ -5,40 +5,12 @@ tagline: Stream torrents through Debrid and 3rd party services
 category: Media
 version: "1.2.3"
 port: 8080
-description: >-
-  StreamArr Pro is a powerful streaming application that integrates with Debrid services 
-  and third-party content sources to provide seamless torrent streaming.
-  
-  
-  **Features:**
-  
-  - Stream torrents through Real-Debrid, All-Debrid, and other Debrid services
-  
-  - Integrates with TMDB, Mdblist, and other content sources
-  
-  - Advanced proxy support for reliable streaming
-  
-  - Playlist and M3U support
-  
-  - Health monitoring and auto-restart
-  
-  
-  **Requirements:**
-  
-  - Debrid service account (Real-Debrid, All-Debrid, etc.)
-  
-  - API keys for content sources (optional)
-
+description: StreamArr Pro is a powerful streaming application that integrates with Debrid services and third-party content sources to provide seamless torrent streaming.
 developer: ZeroQ
 website: https://github.com/ZeroQ-bit/StreamArr-Pro
 submitter: ZeroQ
 submission: https://github.com/ZeroQ-bit/My-Umbrel-Apps
 repo: https://github.com/ZeroQ-bit/StreamArr-Pro
 support: https://github.com/ZeroQ-bit/StreamArr-Pro/issues
-gallery: []
-releaseNotes: >-
-  StreamArr Pro for Umbrel
+releaseNotes: StreamArr Pro for Umbrel
 dependencies: []
-path: ""
-defaultUsername: ""
-defaultPassword: ""
